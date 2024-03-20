@@ -1,12 +1,13 @@
 import random
 
-def get_numbers_tickets():
-    try:        
-        min = int(input("Введіть ціле число від 1 до 1000: "))
+min = int(input("Введіть ціле число від 1 до 1000: "))
+max = int(input("Введіть ціле число від 1 до 1000: "))
+quantaty = int(input("Введіть ціле число в межах від 1 до 1000: "))
+
+def get_numbers_tickets(min, max, quantaty):
+    try:
         if min >= 1:
-            max = int(input("Введіть ціле число від 1 до 1000: "))
             if max >= 1 and max <= 1000:
-                quantaty = int(input("Введіть ціле число в межах від 1 до 1000: "))
                 if quantaty >= 1 and quantaty <= 1000:
                         vin_numbers = []
                         count = 0
@@ -26,4 +27,4 @@ def get_numbers_tickets():
     except:
         print("Введіть коректне число!")
 
-get_numbers_tickets()
+get_numbers_tickets(min, max, quantaty)
